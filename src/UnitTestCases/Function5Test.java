@@ -24,9 +24,9 @@ public class Function5Test {
 	
 	@Test
     public void testCheckInput() {
-        assertEquals("e", Function5.checkValid("e"));
-        assertEquals("10", Function5.checkValid("10"));
-        assertEquals("-12", Function5.checkValid("-12"));
+        assertEquals("e", Function5.ValidationFunction("e"));
+        assertEquals("10", Function5.ValidationFunction("10"));
+        assertEquals("-12", Function5.ValidationFunction("-12"));
 	}
 	
 	/**
@@ -63,8 +63,8 @@ public class Function5Test {
 	 */
 	@Test
     public void testNegativeF5PowerFunction() {
-        assertEquals(1024.0, Function5.f5Power(-2,10),1);
-        assertEquals(-512.0, Function5.f5Power(-2,9),1);
+        assertEquals(1024.0, Function5.powerfunction(-2,10),1);
+        assertEquals(-512.0, Function5.powerfunction(-2,9),1);
 	}
 	
 	/**

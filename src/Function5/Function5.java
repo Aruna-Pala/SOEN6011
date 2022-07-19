@@ -17,7 +17,7 @@ public class Function5 {
 			return powerHandler(x*x, n/2);
 		return x*powerHandler(x*x, n/2);
 	}
-	public static double f5Power(double x, int n) {
+	public static double powerfunction(double x, int n) {
 		if(n < 0) {
 			return 1.0/powerHandler(x,Math.abs(n));
 		}
@@ -26,28 +26,31 @@ public class Function5 {
 	
 	/* exponential algorithm */
 	public static double exponential(int n){
-		int x = 1;
-        double sum = 1;
-        for (int i = n - 1; i > 0; --i )
-            sum = 1 + x * sum / i;
-  
+		double sum = 1; 
+		int x = 10;
+        for (int i = x - 1; i > 0; --i ) {        	
+        	sum = 1 + n * sum / i;
+        }
         return sum;
     }
-	public static String checkValid(String input) {
+	
+	  
+	
+	public static String ValidationFunction(String input) {
 	
 		if(input.equals("e")) {
 			return input;
 		}else {
 			try {
-				double tempa = Double.parseDouble(input);
-				if(tempa > -100000 && tempa <= 100000) {
+				double temp_a = Double.parseDouble(input);
+				if(temp_a > -100000 && temp_a <= 100000) {
 					return input;
 				}else {
 					System.out.println("Please provide input ranging from -100000 to 100000");
 				}
 				
 			}catch(NumberFormatException e) {
-				System.out.println("Invalid Input - "+e);
+				System.out.println("Input given is invalid - "+e);
 			}
 			System.out.println("Please enter again");
 			return null;
@@ -55,30 +58,30 @@ public class Function5 {
 	}
 	public static String function5(String a, String b, String x) {
 		double y;
-		double tempa = 0, tempb = 0;
-		int tempx = 0;
+		double temp_a = 0, temp_b = 0;
+		int temp_x = 0;
 		
 		if(a.equals("e")) {
-			tempa = 1;
+			temp_a = 1;
 		}else {
-			tempa = Long.parseLong(a);
+			temp_a = Long.parseLong(a);
 		}
 		
 		if(b.equals("e")) {
 			y = exponential(Integer.parseInt(x));
-			y = tempa*y;
+			y = temp_a*y;
 			
 		}else {
-			tempb = Double.parseDouble(b);
+			temp_b = Double.parseDouble(b);
 			if(x.equals("e")) {
-				tempx = 1;
+				temp_x = 1;
 			}else {
-				tempx = Integer.parseInt(x);
+				temp_x = Integer.parseInt(x);
 			}
 			
-			if(tempb != 0.0) {
-				y = f5Power(tempb,tempx);
-				y = tempa*y;
+			if(temp_b != 0.0) {
+				y = powerfunction(temp_b,temp_x);
+				y = temp_a*y;
 			}else {
 				y = 0;
 			}
@@ -89,32 +92,32 @@ public class Function5 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+			// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Please enter value for a = ");
 		String a = sc.next();
-		a = checkValid(a);
+		a = ValidationFunction(a);
 		while(a == null) {
 			System.out.println("Please enter value for a = ");
 			a = sc.next();
-			a =checkValid(a);
+			a =ValidationFunction(a);
 		}
 		System.out.print("Please enter value for b = ");
 		String b = sc.next();
-		b = checkValid(b);
+		b = ValidationFunction(b);
 		while(b == null) {
 			System.out.println("Please enter value for b = ");
 			b = sc.next();
-			b =checkValid(b);
+			b =ValidationFunction(b);
 		}
 		System.out.print("Please enter value for x = ");
 		String x = sc.next();
-		x = checkValid(x);
+		x = ValidationFunction(x);
 		while(x == null || x.equals("e")) {
 			System.out.println("Please enter value for x = ");
 			x = sc.next();
-			x =checkValid(x);
+			x =ValidationFunction(x);
 		}
 		String result =  "Result is " + function5(a,b,x);
 		
