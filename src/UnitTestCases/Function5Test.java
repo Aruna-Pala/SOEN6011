@@ -1,10 +1,10 @@
 package UnitTestCases;
 
 import static org.junit.Assert.assertEquals;
+import ScientificCalculator.ScientificCalculator;
 
 import org.junit.Test;
 
-import Function5.Function5;
 
 /**
  * SOEN 6011 Test Cases for F5 = ab^x
@@ -24,9 +24,9 @@ public class Function5Test {
 	
 	@Test
     public void testCheckInput() {
-        assertEquals("e", Function5.ValidationFunction("e"));
-        assertEquals("22", Function5.ValidationFunction("22"));
-        assertEquals("-23.4", Function5.ValidationFunction("-23.4"));
+        assertEquals("e", ScientificCalculator.ValidationFunction("e"));
+        assertEquals("22", ScientificCalculator.ValidationFunction("22"));
+        assertEquals("-23.4", ScientificCalculator.ValidationFunction("-23.4"));
 	}
 	
 	/**
@@ -38,9 +38,9 @@ public class Function5Test {
 	
 	@Test
     public void testMagicalNumbere() {
-        double sum = Function5.exponential(2);
+        double sum = ScientificCalculator.exponential(2);
         String result = Double.toString(sum);
-        assertEquals(result, Function5.function5("1", "e", "2"));
+        assertEquals(result, ScientificCalculator.function5("1", "e", "2"));
 	}
 	
 	/**
@@ -51,8 +51,8 @@ public class Function5Test {
 	 */
 	@Test
     public void testfunction5() {
-        assertEquals("54.0", Function5.function5("2", "3", "3"));
-        assertEquals("-54.0", Function5.function5("-2", "3", "3"));
+        assertEquals("54.0", ScientificCalculator.function5("2", "3", "3"));
+        assertEquals("-54.0", ScientificCalculator.function5("-2", "3", "3"));
 	}
 	
 	/**
@@ -63,8 +63,8 @@ public class Function5Test {
 	 */
 	@Test
     public void testNegativeF5PowerFunction() {
-        assertEquals(25.0, Function5.powerfunction(-5,2),1);
-        assertEquals(-19683.0, Function5.powerfunction(-3,9),1);
+        assertEquals(25.0, ScientificCalculator.powerfunction(-5,2),1);
+        assertEquals(-19683.0, ScientificCalculator.powerfunction(-3,9),1);
 	}
 	
 	/**
@@ -75,8 +75,8 @@ public class Function5Test {
 	 */
 	@Test
     public void testBigIntegerPower() {
-		assertEquals("Infinity", Function5.function5("20", "2", "6000"));
-        assertEquals("-Infinity", Function5.function5("-2", "2", "10000"));
+		assertEquals("Infinity", ScientificCalculator.function5("20", "2", "6000"));
+        assertEquals("-Infinity", ScientificCalculator.function5("-2", "2", "10000"));
 	}
 	
 	/**
@@ -87,8 +87,8 @@ public class Function5Test {
 	 */
 	@Test
     public void testAnythingPowerZero() {
-		assertEquals("20.0", Function5.function5("20", "2", "0"));
-        assertEquals("0.0", Function5.function5("2", "0", "0"));
+		assertEquals("20.0", ScientificCalculator.function5("20", "2", "0"));
+        assertEquals("0.0", ScientificCalculator.function5("2", "0", "0"));
 	}
 
 }
