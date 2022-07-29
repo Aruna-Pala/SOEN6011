@@ -104,20 +104,4 @@ public class ScientificCalculator {
 				return null;
 			}
 		}
-		
-		
-		public static void menu() {
-			int choice = 0;
-			Scanner input = new Scanner(System.in);
-			System.out.println("Avaiable Function");
-			System.out.println("1. Function : tan(x) \n2. Function : sinh(x)\n3. Function : ab^x\n4. Function : x^y\n5. End");
-			System.out.print("\nPlease enter your choice (enter function number) = ");
-			try {
-				choice = input.nextInt();
-			}catch(InputMismatchException e) {
-				System.out.println("Please enter valid integers\n");
-				menu();
-			}
-			
-		}
 }
