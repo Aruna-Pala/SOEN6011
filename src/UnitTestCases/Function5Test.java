@@ -58,13 +58,13 @@ public class Function5Test {
 	/**
 	 * ID = TC4
 	 * Test  Case =  testing power function for the constant as base to the power x
-	 * Function Included = powerfunction
+	 * Function Included = powerFunction
 	 * Functional Requirement ID = FR3, FR7
 	 */
 	@Test
-    public void testNegativeF5PowerFunction() {
-        assertEquals(25.0, ScientificCalculator.powerfunction(-5,2),1);
-        assertEquals(-19683.0, ScientificCalculator.powerfunction(-3,9),1);
+    public void testNegativeF5powerFunction() {
+        assertEquals(25.0, ScientificCalculator.powerFunction(-5,2),1);
+        assertEquals(-19683.0, ScientificCalculator.powerFunction(-3,9),1);
 	}
 	
 	/**
