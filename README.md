@@ -20,8 +20,8 @@
 3. `cd Output` into the folder of the SOEN6011, Output folder contains .jar executable file.
 
 
-## Run implemented Scientific calculator Function 5 ab power x
+## Run implemented Scientific calculator Function 5 ab^x
 1. To run jar file enter command as `java -jar soen6011.jar`
 2. It asks user to provide a,b and x values.
 3. Where a and b are constants and x is a real number.
-4. Provide a,b and x value and click enter you can see the resuly
+4. Provide a,b and x value and click enter you can see the result
