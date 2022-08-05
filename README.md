@@ -25,3 +25,7 @@
 2. It asks user to provide a,b and x values.
 3. Where a and b are constants and x is a real number.
 4. Provide a,b and x value and click enter you can see the result
+5. To run through submitted file the open `SOEN6011_Project Git repo` path in `command prompt`
+6. `cd output' into the folder of SOEN6011_Project Git repo.
+7. Run the command `java -jar soen6011.jar`
+8. Enter the input values and get results in command prompt.Since I used Textual interface we can run like mentioned before.
