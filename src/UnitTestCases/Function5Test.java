@@ -37,7 +37,7 @@ public class Function5Test {
 	 */
 
 	@Test
-	public void testMagicalNumbere() {
+	public void testMagicalNumber() {
 		double sum = ScientificCalculator.exponential(2);
 		String result = Double.toString(sum);
 		assertEquals(result, ScientificCalculator.function5("1", "e", "2"));
@@ -53,6 +53,7 @@ public class Function5Test {
 	public void testfunction5() {
 		assertEquals("54.0", ScientificCalculator.function5("2", "3", "3"));
 		assertEquals("-54.0", ScientificCalculator.function5("-2", "3", "3"));
+		assertEquals("20.090217132610203", ScientificCalculator.function5("2", "3", "2.1"));
 	}
 
 	/**
@@ -65,6 +66,7 @@ public class Function5Test {
 	public void testNegativeF5powerFunction() {
 		assertEquals(25.0, ScientificCalculator.powerFunction(-5, 2), 1);
 		assertEquals(-19683.0, ScientificCalculator.powerFunction(-3, 9), 1);
+		
 	}
 
 	/**
